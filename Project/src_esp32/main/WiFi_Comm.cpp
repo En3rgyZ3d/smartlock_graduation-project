@@ -2,6 +2,9 @@
 #include <WiFi.h>
 #include <WiFiAP.h>
 #include <Arduino.h>
+#include <esp_wifi.h>                // For esp_wifi_ap_get_sta_list
+
+
 
 
 NetworkServer server(80);
@@ -57,6 +60,29 @@ void clientWiFiLogging() {
   }
 
   
-    
+  
+}
 
+void logConnectedStations()
+{
+  wifi_sta_list_t sta_list;
+
+  if (esp_wifi_ap_get_sta_list(&sta_list) == ESP_OK) {
+    Serial.printf("Connected stations: %d\n", sta_list.num);
+
+    for (int i = 0; i < sta_list.num; ++i) {
+      wifi_sta_info_t station = sta_list.sta[i];
+      char macStr[18];
+      snprintf(macStr, sizeof(macStr),
+               "%02X:%02X:%02X:%02X:%02X:%02X",
+               station.mac[0], station.mac[1], station.mac[2],
+               station.mac[3], station.mac[4], station.mac[5]);
+
+      Serial.printf("Client #%d: %s\n", i + 1, macStr);
+    }
+  } else {
+    Serial.println("Failed to get station list.");
+  }
+
+  delay(5000);  // Check every 5 seconds
 }

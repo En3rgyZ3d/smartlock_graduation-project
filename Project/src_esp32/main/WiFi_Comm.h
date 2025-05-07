@@ -16,5 +16,7 @@ void _serialDebugSetup();
 void setupWiFiAP(const char *ssid, const char *password);
 void clientWiFiLogging();
 
+void logConnectedStations(); 
+
 
 #endif

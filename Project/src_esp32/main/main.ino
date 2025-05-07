@@ -11,6 +11,6 @@ void setup() {
 
 void loop() {
 
-  clientWiFiLogging();
-  
+  //clientWiFiLogging();
+  logConnectedStations();
 }
