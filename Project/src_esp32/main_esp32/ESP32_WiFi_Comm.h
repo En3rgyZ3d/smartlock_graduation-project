@@ -1,5 +1,5 @@
-#ifndef WIFI_COMM_H
-#define WIFI_COMM_H
+#ifndef ESP32_WIFI_COMM_H
+#define ESP32_WIFI_COMM_H
 
 #include <NetworkClient.h>
 #include <NetworkServer.h>

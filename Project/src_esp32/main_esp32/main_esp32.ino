@@ -1,4 +1,4 @@
-#include "WiFi_Comm.h"
+#include "ESP32_WiFi_Comm.h"
 
 // Set these to your desired credentials.
 const char *ssid = "IoT-Testing-GradProj";
