@@ -1,8 +1,8 @@
 #include "WiFi_Comm.h"
 
 // Set these to your desired credentials.
-const char *ssid = "yourAP";
-const char *password = "yourPassword";
+const char *ssid = "IoT-Testing-GradProj";
+const char *password = "t3sT1nG-gR4d";
 
 
 void setup() {

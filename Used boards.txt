@@ -1,0 +1,6 @@
+Board utilizzate (per selezionare su arduino ide)
+
+
+ESP32 Dev Module
+
+NodeMCU 1.0 (ESP-12E)
