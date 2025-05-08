@@ -6,7 +6,7 @@ from ..data.authKeys_exampleDB import valid_keys
 
 router = APIRouter(prefix="/auth")
 
-@router.post("/auth")
+@router.post("/")
 def validate_auth_key(auth_key: AuthKey):
     '''Checks if the auth key is valid.'''
     if auth_key in list(valid_keys.values()):
