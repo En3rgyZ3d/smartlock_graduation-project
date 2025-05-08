@@ -9,14 +9,20 @@
 
 
 typedef enum {
+  L_IDLE,
   L_CLOSED,
   L_VERIFY,
-  L_OPEN
+  L_OPEN,
+  ST_CONN, ST_NOCONN,
+  ST_SERVERUP, ST_SERVERDOWN,
+  AUTH_NONVALID
 } lockStatus_t;
 
 typedef enum {
-  RED, GREEN, BLUE,
-  B_RED, B_GREEN, B_BLUE // BLINKING STATES
+  NONE  = 0,
+  RED   = 1 << 0,  // 0001
+  GREEN = 1 << 1,  // 0010
+  BLUE  = 1 << 2   // 0100
 } ledStatus_t;
 
 

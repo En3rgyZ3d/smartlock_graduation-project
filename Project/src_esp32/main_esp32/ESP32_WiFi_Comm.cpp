@@ -10,8 +10,7 @@
 NetworkServer server(80);
 
 
-
-void setupWiFiAP(const char *ssid, const char *password)
+void setupWiFiAP(const char *ssid, const char *password, IPAddress local_ip, IPAddress gateway, IPAddress subnet)
 {
   pinMode(LED_BUILTIN, OUTPUT);
 
@@ -26,6 +25,9 @@ void setupWiFiAP(const char *ssid, const char *password)
     while (1)
       ;
   }
+
+  WiFi.softAPConfig(local_ip, gateway, subnet);
+
   IPAddress myIP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(myIP);

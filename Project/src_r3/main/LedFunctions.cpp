@@ -12,37 +12,7 @@ void outputLedSetup() {
 
 
 void ledControl(ledStatus_t input) {
-
-    switch (input) {
-      case RED:
-        {
-          digitalWrite(LED_ERR, HIGH);
-          digitalWrite(LED_OPEN, LOW);
-          digitalWrite(LED_CLOSED, LOW);
-          break;
-        }
-      case GREEN:
-        {
-          digitalWrite(LED_ERR, LOW);
-          digitalWrite(LED_OPEN, HIGH);
-          digitalWrite(LED_CLOSED, LOW);
-  
-          break;
-        }
-      case BLUE:
-        {
-          digitalWrite(LED_ERR, LOW);
-          digitalWrite(LED_OPEN, LOW);
-          digitalWrite(LED_CLOSED, HIGH);
-  
-          break;
-        }
-      default:
-        {
-          digitalWrite(LED_ERR, LOW);
-          digitalWrite(LED_OPEN, LOW);
-          digitalWrite(LED_CLOSED, LOW);
-        }
-    }
-  }
-  
+  digitalWrite(LED_ERR,     (input & RED)   ? HIGH : LOW);
+  digitalWrite(LED_OPEN,    (input & GREEN) ? HIGH : LOW);
+  digitalWrite(LED_CLOSED,  (input & BLUE)  ? HIGH : LOW);
+}

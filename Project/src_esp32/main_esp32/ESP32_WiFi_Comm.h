@@ -8,12 +8,13 @@
 #define LED_BUILTIN 2
 #endif
 
+
 extern NetworkServer server;
 
 
 void _serialDebugSetup();
 
-void setupWiFiAP(const char *ssid, const char *password);
+void setupWiFiAP(const char *ssid, const char *password, IPAddress local_ip, IPAddress gateway, IPAddress subnet);
 void clientWiFiLogging();
 
 void logConnectedStations(); 

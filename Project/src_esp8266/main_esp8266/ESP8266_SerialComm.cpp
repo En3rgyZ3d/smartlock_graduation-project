@@ -35,3 +35,17 @@ String ReadData_max256() {
   return result;
 }
 
+
+String stripAtFirstLineEnd(String input) {
+  int index = input.indexOf("\r\n");
+  if (index == -1) {
+    index = input.indexOf("\n\r");
+  }
+
+  if (index != -1) {
+    return input.substring(0, index);
+  }
+
+  // If neither sequence is found, return the whole string
+  return input;
+}

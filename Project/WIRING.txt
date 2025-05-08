@@ -1,0 +1,10 @@
+WIRING
+
+R3 -> ESP8266
+
+A3 -> D1
+A4 -> D2
+A5 -> D7
+
+10 -> D5
+11 -> breadboard -> D6
