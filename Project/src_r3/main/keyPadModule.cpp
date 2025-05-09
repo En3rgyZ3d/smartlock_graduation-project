@@ -9,5 +9,5 @@ char KEYS[ROWS][COLS]={
 {'7', '8', '9', 'C'},
 {'*', '0', '#', 'D'}
 };
-byte colPIN[COLS] = { 3, 2, 13, 0 };
-byte rowPIN[ROWS] = { 7, 6, 5, 4 };
+byte colPIN[COLS] = { 3, 2, 13, 0 }; // From left to right (white cables, last 4 pins)
+byte rowPIN[ROWS] = { 7, 6, 5, 4 }; // From left to right (green cables, first 4 pins)

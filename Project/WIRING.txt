@@ -8,3 +8,9 @@ A5 -> D7
 
 11 -> D5 (RX r3 -> TX esp)
 12 -> breadboard -> D6 (TX r3 -> RX esp with lowered voltage)
+
+
+Keypad:
+
+{R4,R3,R2,R1} = {7,6,5,4}
+{C4,C3,C2,C1} = {3,2,13,0} // 0 -> unwired
