@@ -6,5 +6,5 @@ A3 -> D1
 A4 -> D2
 A5 -> D7
 
-10 -> D5
-11 -> breadboard -> D6
+11 -> D5 (RX r3 -> TX esp)
+12 -> breadboard -> D6 (TX r3 -> RX esp with lowered voltage)

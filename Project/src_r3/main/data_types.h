@@ -2,9 +2,9 @@
 #define MAIN_DATA_TYPES_H
 
 
-#define LED_ERR 2
-#define LED_OPEN 3
-#define LED_CLOSED 4
+#define LED_ERR 8
+#define LED_OPEN 9
+#define LED_CLOSED 10
 
 
 

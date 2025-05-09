@@ -3,8 +3,8 @@
 
 #include <SoftwareSerial.h>  // Include SoftwareSerial library
 #include <Arduino.h>
-#define TX_PIN 11
-#define RX_PIN 10
+#define TX_PIN 12
+#define RX_PIN 11
 
 
 // Declare SoftwareSerial object
