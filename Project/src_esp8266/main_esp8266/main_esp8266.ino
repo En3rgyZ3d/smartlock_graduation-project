@@ -34,8 +34,11 @@ void loop()
 
     while (httpHealthStatus(healthUrlCheck) != 200)
     {
-
+      if (checkWiFiComm()) {
       espSetStatus(STATUS_SERVERDOWN);
+      } else {
+        espSetStatus(STATUS_NOCONN);
+      }
       delay(250);
     }
 
